@@ -86,7 +86,7 @@ const Profile = () => {
               type="text"
               className="profileEmail"
               id="email"
-              disabled="true"
+              disabled
               value={email}
             />
           </form>
