@@ -251,8 +251,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   background-color: #00cc66;
   border-radius: 50%;
 }
