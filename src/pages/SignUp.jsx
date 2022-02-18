@@ -6,7 +6,7 @@ import {
   updateProfile,
   getAuth,
 } from "firebase/auth";
-import { db } from "../../firebase.config";
+import { db } from "../firebase.config";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 
