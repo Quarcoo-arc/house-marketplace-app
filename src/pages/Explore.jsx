@@ -6,7 +6,7 @@ const Explore = () => {
   return (
     <div className="explore">
       <header>
-        <p className="pagHeader">Explore</p>
+        <p className="pageHeader">Explore</p>
       </header>
 
       <main>
@@ -16,7 +16,7 @@ const Explore = () => {
         <div className="exploreCategories">
           <Link to="/category/rent">
             <img
-              className="exploreCategoryImage"
+              className="exploreCategoryImg"
               src={rentCategoryImage}
               alt="rent"
             />
@@ -24,7 +24,7 @@ const Explore = () => {
           </Link>
           <Link to="/category/sell">
             <img
-              className="exploreCategoryImage"
+              className="exploreCategoryImg"
               src={sellCategoryImage}
               alt="sell"
             />
