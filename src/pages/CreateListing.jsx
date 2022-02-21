@@ -167,7 +167,6 @@ const CreateListing = () => {
       [...images].map((image) => storeImage(image))
     ).catch((error) => {
       setLoading(false);
-      console.log(error);
       toast.error("Image upload failed!");
       return;
     });
