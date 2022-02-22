@@ -35,7 +35,7 @@ const Listing = () => {
     };
 
     fetchListing();
-  }, []);
+  }, [params.listingId]);
 
   if (loading) {
     return <Spinner />;
