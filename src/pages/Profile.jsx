@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAuth, updateProfile } from "firebase/auth";
 import {
   collection,
+  deleteDoc,
   doc,
   getDocs,
   orderBy,
@@ -88,6 +89,17 @@ const Profile = () => {
     }));
   };
 
+  const onDelete = async (listingId) => {
+    if (window.confirm("Are you sure you want to delete this item? ")) {
+      await deleteDoc(doc(db, "listings", listingId));
+      const updatedListings = listings.filter(
+        (listing) => listing.id !== listingId
+      );
+      setListings(updatedListings);
+      toast.success("Item was successfully deleted!");
+    }
+  };
+
   return (
     <div className="profile">
       <header className="profileHeader">
@@ -146,7 +158,7 @@ const Profile = () => {
                   key={listing.id}
                   listing={listing.data}
                   id={listing.id}
-                  onDelete={true}
+                  onDelete={() => onDelete(listing.id)}
                 />
               ))}
             </ul>
