@@ -7,6 +7,7 @@ import { db } from "../firebase.config";
 const Contact = () => {
   const [message, setMessage] = useState("");
   const [landlord, setLandlord] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [searchParams, setSearchParams] = useSearchParams();
 
   const params = useParams();
